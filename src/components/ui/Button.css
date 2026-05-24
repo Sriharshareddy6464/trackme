@@ -1,0 +1,62 @@
+/* ============================================================
+   Button — shared UI primitive
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    filter 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ── Primary ─────────────────────────────────────────────── */
+.btn--primary {
+  background: var(--color-accent-primary);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn--primary:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+/* ── Ghost ───────────────────────────────────────────────── */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
+}
+
+/* ── Danger ──────────────────────────────────────────────── */
+.btn--danger {
+  background: var(--color-accent-coral);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn--danger:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+/* ── Disabled state (all variants) ──────────────────────── */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
