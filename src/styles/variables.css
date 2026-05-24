@@ -1,0 +1,40 @@
+/* ============================================================
+   TRACKME — CSS Custom Properties
+   ============================================================ */
+
+:root {
+  /* ----------------------------------------------------------
+     Hero / Light-Blue Mode
+     ---------------------------------------------------------- */
+  --hero-bg: #b8d8e8;
+  --hero-text: #ffffff;
+  --hero-text-muted: rgba(255, 255, 255, 0.5);
+  --drawer-bg: #ffffff;
+  --drawer-text: #1a1a2e;
+  --drawer-hover: #f0f6fa;
+
+  /* ----------------------------------------------------------
+     Dark Board Mode
+     ---------------------------------------------------------- */
+
+  /* Backgrounds */
+  --color-bg-app: #0f0f12;
+  --color-bg-surface: #16161b;
+  --color-bg-card: #1e1e26;
+  --color-bg-elevated: #252530;
+
+  /* Accent Colors */
+  --color-accent-primary: #7f77dd;
+  --color-accent-teal: #1d9e75;
+  --color-accent-amber: #ef9f27;
+  --color-accent-coral: #d85a30;
+
+  /* Text */
+  --color-text-primary: #e8e8f0;
+  --color-text-secondary: #8888a0;
+  --color-text-muted: #44445a;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(255, 255, 255, 0.14);
+}
