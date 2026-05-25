@@ -2,10 +2,25 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import Drawer from './Drawer';
+import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
+import { useGoalCompletionConfetti } from '@/hooks/useGoalCompletionConfetti';
+import useUIStore from '@/store/useUIStore';
 
 export default function AppShell({ children }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const location = useLocation();
+
+  const openSearch = useUIStore((s) => s.openSearch);
+
+  // Activate confetti on goal completion
+  useGoalCompletionConfetti();
+
+  // Global keyboard shortcuts active on all board pages
+  useKeyboardShortcuts({
+    onOpenSearch: openSearch,
+    // onNewItem and onCloseModal can be wired per-page if needed;
+    // leaving them undefined here means they're no-ops at the shell level.
+  });
 
   return (
     <div
